@@ -1,9 +1,8 @@
 #include <assimp/DefaultLogger.hpp>
+#include <cstdlib>
 
 #include "window.h"
 #include "d3d11/directx_wrapper.h"
-#include <cstdlib>
-#include <iostream>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR pCmdLine, int nCmdShow) {
     std::srand(std::time(nullptr));
@@ -19,6 +18,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR pCmdLine, int nCmdShow)
             );
 
     Assimp::DefaultLogger::kill();
-
     return 0;
 }

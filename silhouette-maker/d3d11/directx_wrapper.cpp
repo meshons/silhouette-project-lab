@@ -346,7 +346,8 @@ bool directx_wrapper::render_frame() {
 	        file += L"/";
 	        file += std::wstring(model_name.begin(), model_name.end());
             file += std::to_wstring(model->getBlockState());
-	        file += std::to_wstring(model->getRotationState());
+            file += L"_";
+            file += std::to_wstring(model->getRotationState());
 	        file += std::wstring(L".jpg");
 
 	        SaveWICTextureToFile(
